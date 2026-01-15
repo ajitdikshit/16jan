@@ -1,0 +1,130 @@
+@keyframes beating{
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.05);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.05);
+    }
+    80%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color : lightblue;
+    font-family: pacifico;
+}
+img{
+    height: 20vw;
+    width: 25vw;
+    flex: 1;
+    justify-content: center;
+    max-width: 25vw;
+}
+.heart{
+    display: flex;
+    padding:20px 0px 0px 20px;
+    flex-direction: row;
+}
+.heading{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Pacifico";
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+}
+.emoji {
+    margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.emoji::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('emoji.png') no-repeat center center;
+  background-size: cover;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  animation: reveal 3s ease-in-out infinite;
+}
+
+@keyframes reveal {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}   
+.heart img{
+    animation: beating 1s ease-in-out infinite;
+}
+.button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.button button{
+    justify-content: center;
+    flex: auto;
+    height: 50px;
+    font-family: pacifico;
+    font-size: 25px;
+    transition: 1s;
+    border-radius: 10px;
+    border-style: dashed;
+    position: relative;
+
+}
+.button button:hover{
+    background-color: lightpink;
+    transform: scale(1.05);
+}
+.heartemoji{
+    align-self: center;
+    margin-left: 150px;
+}
+.letter {
+    height: fit-content;
+    display: flex;
+    font-family: pacifico;
+    font-size: 15px;
+}
+a{
+    font-family: pacifico;
+    margin-left: 20px;
+}
+ol{
+    font-family: pacifico;
+}
+li{
+    padding: 10px;
+}
+.image-phone{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
